@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "becipe",
+    "name": "Dishr",
     "slug": "becipe",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -65,7 +65,7 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Allow becipe to access your photos to add pictures to recipes."
+          "photosPermission": "Allow Dishr to access your photos to add pictures to recipes."
         }
       ]
     ],
