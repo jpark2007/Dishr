@@ -81,5 +81,5 @@ Never hardcode hex values — always use tokens from `lib/theme.ts`.
 
 ## Team
 
-- **Drew (drewkhalil3)** — Technical lead
-- **Jonah (jpark2007)** — Co-founder, product & growth
+- **Drew (drewkhalil3)** — Product dev
+- **Jonah (jpark2007)** — Co-founder, technical lead
