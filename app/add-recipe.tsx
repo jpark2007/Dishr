@@ -21,7 +21,6 @@ import { Image as ExpoImage } from 'expo-image';
 import * as ImagePicker from 'expo-image-picker';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter, useLocalSearchParams } from 'expo-router';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { supabase } from '@/lib/supabase';
 import { useAuthStore } from '@/store/auth';
 import { queryClient } from '@/lib/query-client';
@@ -350,12 +349,7 @@ export default function AddRecipeScreen() {
             <Pressable style={styles.iconBtn} onPress={() => router.back()}>
               <Text style={styles.iconBtnText}>←</Text>
             </Pressable>
-            <Pressable
-              style={styles.iconBtn}
-              onPress={() => router.push('/voice-dictate' as any)}
-            >
-              <MaterialCommunityIcons name="waveform" size={22} color={colors.ink} />
-            </Pressable>
+            {/* voice dictate deferred to v2 */}
           </View>
 
           <EditorialHeading size={26} emphasis="recipe" emphasisColor="clay">

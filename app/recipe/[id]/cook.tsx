@@ -11,7 +11,6 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useQuery } from '@tanstack/react-query';
 import { GestureDetector, Gesture } from 'react-native-gesture-handler';
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, runOnJS } from 'react-native-reanimated';
@@ -232,7 +231,7 @@ export default function CookScreen() {
           ) : null}
         </ScrollView>
 
-        {/* Footer: prev / next / mic */}
+        {/* Footer: prev / next  (voice/mic deferred to v2) */}
         <View style={styles.footer}>
           <Pressable
             style={[styles.prevBtn, stepIndex === 0 ? styles.btnDisabled : null]}
@@ -248,12 +247,6 @@ export default function CookScreen() {
             <Text style={styles.nextBtnText}>
               {isDone ? 'finish' : 'next step →'}
             </Text>
-          </Pressable>
-          <Pressable
-            style={styles.micBtn}
-            onPress={() => router.push(`/recipe/${id}/voice-cook`)}
-          >
-            <MaterialCommunityIcons name="waveform" size={22} color={colors.ink} />
           </Pressable>
         </View>
 
