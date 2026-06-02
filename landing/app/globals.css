@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ── Becipe identity tokens (from the app's lib/theme.ts) ── */
+@theme inline {
+  --color-bg: #F4F4F0;
+  --color-bone: #FCFCFA;
+  --color-card: #FFFFFF;
+  --color-border: #ECECE6;
+  --color-borderSoft: #F5F5F0;
+  --color-parchment: #F5E9D3;
+
+  --color-ink: #0B0B0C;
+  --color-inkSoft: #3A3A40;
+  --color-muted: #8A8A93;
+
+  --color-sage: #4A6B3E;
+  --color-sageDeep: #36502C;
+  --color-sageSoft: #EDF1E6;
+
+  --color-clay: #C24A28;
+  --color-clayDeep: #962E13;
+  --color-claySoft: #FBE7DF;
+
+  --color-ochre: #C7902A;
+  --color-ochreSoft: #F8EED5;
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-dmmono);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  overflow-x: clip; /* clip (not hidden) so it doesn't break position: sticky */
+  max-width: 100%;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Eyebrow label — mono, uppercase, tracked */
+.eyebrow {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+}
+
+/* Editorial display headline */
+.display {
+  font-family: var(--font-display), Georgia, serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+  line-height: 0.96;
+}
+
+/* Subtle grain / paper texture overlay */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+/* Hide scrollbars on internal mock screens */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Graceful degradation */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
