@@ -28,14 +28,14 @@ Last updated: 2026-04-05
 ### Not Started — Needed Before Launch
 
 **Security (HIGH PRIORITY):**
-- [ ] Fix feed_items RLS policy — currently allows unauthenticated inserts (`with check (true)` → change to `auth.uid() is not null`)
-- [ ] Add rate limiting on edge functions (parse-recipe, parse-video) — prevent abuse/DoS
-- [ ] Input validation/sanitization on all user inputs (XSS prevention)
-- [ ] URL validation in edge functions (format check + reject non-http URLs before fetching)
-- [ ] Photo upload validation (file type + size limits)
-- [ ] Move Instagram access token to proper secret handling (currently in URL query string)
-- [ ] Error boundary component (global crash handler)
-- [ ] No API keys in frontend — VERIFIED CLEAN, keep it that way
+- [x] Fix feed_items RLS policy — migration 004_fix_feed_rls.sql: `auth.uid() = actor_id`
+- [x] Rate limiting on edge functions — in-memory 20 req/min per IP on both parse-recipe and parse-video
+- [x] Input validation/sanitization on all user inputs — all recipe fields trimmed + length-limited; React Native has no DOM XSS
+- [x] URL validation in edge functions — format check + SSRF prevention (blocks private IPs)
+- [x] Photo upload validation — file type + 5MB limit on try screen; 10MB limit + type check on recipe cover
+- [x] Instagram access token in Supabase secrets — reads from `Deno.env.get('INSTAGRAM_ACCESS_TOKEN')`
+- [x] Error boundary component — ErrorBoundary.tsx wraps root layout
+- [x] No API keys in frontend — VERIFIED CLEAN, keep it that way
 
 **Features:**
 - [ ] Drew added to Supabase project (waiting on jpark2007)
@@ -85,7 +85,7 @@ Last updated: 2026-04-05
 | Try logging | 95% | Done |
 | Profiles & follows | 90% | Works, no profile editing yet |
 | Push notifications | 0% | Not started — core for social/viral |
-| Security hardening | 20% | Input validation, upload limits needed |
+| Security hardening | 100% | All items complete |
 | Testing | 0% | No tests |
 | Monitoring/Analytics | 0% | Need Sentry + PostHog |
 | Onboarding | 0% | Animated walkthrough not started |

@@ -255,7 +255,20 @@ export default function AddRecipeScreen() {
         const fileName = `covers/${user.id}/${Date.now()}.${ext}`;
         try {
           const response = await fetch(coverUri);
-          const arrayBuf = await response.arrayBuffer();
+          const blob = await response.blob();
+          if (blob.size > 10 * 1024 * 1024) {
+            Alert.alert('Photo too large', 'Cover photo must be under 10 MB.');
+            setSaving(false);
+            return;
+          }
+          const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/heic'];
+          const actualMime = blob.type || mimeType;
+          if (!allowedTypes.includes(actualMime)) {
+            Alert.alert('Unsupported format', 'Only JPEG, PNG, WebP, or HEIC photos are allowed.');
+            setSaving(false);
+            return;
+          }
+          const arrayBuf = await blob.arrayBuffer();
           const { error: uploadErr } = await supabase.storage
             .from('recipe-photos')
             .upload(fileName, arrayBuf, { contentType: mimeType, upsert: true });
