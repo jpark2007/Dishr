@@ -16,7 +16,6 @@ import { GestureDetector, Gesture } from 'react-native-gesture-handler';
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, runOnJS } from 'react-native-reanimated';
 import { activateKeepAwakeAsync, deactivateKeepAwake } from 'expo-keep-awake';
 import { supabase } from '@/lib/supabase';
-import { COLORS, FONTS } from '@/lib/theme';
 import type { Step, Ingredient, Tip } from '@/lib/database.types';
 import { colors, radius, shadow } from '@/lib/theme';
 import { Plate } from '@/components/Plate';

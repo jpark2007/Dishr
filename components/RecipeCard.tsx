@@ -294,6 +294,10 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 260,
   },
+  scrim: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: colors.overlayScrim,
+  },
   ratingBadge: {
     position: 'absolute',
     top: 12,
