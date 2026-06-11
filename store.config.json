@@ -1,0 +1,51 @@
+{
+  "configVersion": 0,
+  "apple": {
+    "info": {
+      "en-US": {
+        "title": "Dishr — Social Cookbook",
+        "subtitle": "Save, cook, log and share",
+        "description": "Dishr turns the recipes you find into recipes you actually cook.\n\nSAVE FROM ANYWHERE\nPaste a link — or share straight from your browser, TikTok, or Instagram — and Dishr extracts the ingredients and steps into a clean, cookable recipe. No more screenshots you never open again.\n\nCOOK MODE\nA full-screen, step-by-step view built for messy hands: big type, one step at a time, ingredient checklist, and your screen stays awake the whole time.\n\nLOG YOUR TRIES\nEvery time you cook something, log it: rate it out of 10, add notes and photos, and build a history of what you've made. Watch your favorites — and your skills — improve over time.\n\nCOOK WITH YOUR FRIDGE\nTell Dishr what ingredients you have and it finds recipes you can make right now.\n\nA FEED OF REAL COOKING\nFollow friends and other home cooks. See what they're actually making — real tries, real ratings, real photos — not staged food photography. Like, save, and message recipes to friends.\n\nYOUR TASTE, YOUR FEED\nA quick palate quiz tunes discovery to what you love, and your recommendations get smarter as you log more tries.\n\nORGANIZE YOUR KITCHEN\nCollect recipes into albums, keep drafts, save what looks good, and find it all again instantly.\n\nCooking is better together. Dishr is where your recipes — and your people — live.",
+        "keywords": [
+          "recipe",
+          "cookbook",
+          "cooking",
+          "recipes",
+          "meal",
+          "food diary",
+          "tiktok recipes",
+          "fridge",
+          "social",
+          "import"
+        ],
+        "marketingUrl": "https://jpark2007.github.io/Dishr/",
+        "supportUrl": "https://jpark2007.github.io/Dishr/#support",
+        "privacyPolicyUrl": "https://jpark2007.github.io/Dishr/privacy.html"
+      }
+    },
+    "categories": ["FOOD_AND_DRINK", "SOCIAL_NETWORKING"],
+    "copyright": "2026 Dishr",
+    "version": "1.0.0",
+    "release": {
+      "automaticRelease": false
+    },
+    "advisory": {
+      "alcoholTobaccoOrDrugUseOrReferences": "NONE",
+      "contests": "NONE",
+      "gamblingSimulated": "NONE",
+      "horrorOrFearThemes": "NONE",
+      "matureOrSuggestiveThemes": "NONE",
+      "medicalOrTreatmentInformation": "NONE",
+      "profanityOrCrudeHumor": "NONE",
+      "sexualContentGraphicAndNudity": "NONE",
+      "sexualContentOrNudity": "NONE",
+      "violenceCartoonOrFantasy": "NONE",
+      "violenceRealistic": "NONE",
+      "violenceRealisticProlongedGraphicOrSadistic": "NONE",
+      "kidsAgeBand": null,
+      "seventeenPlus": false,
+      "gambling": false,
+      "unrestrictedWebAccess": false
+    }
+  }
+}
