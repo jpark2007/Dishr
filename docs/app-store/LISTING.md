@@ -14,6 +14,13 @@ Everything App Store Connect asks for, pre-answered. The text lives in
 - **Support URL:** https://jpark2007.github.io/Dishr/#support
 - **Marketing URL:** https://jpark2007.github.io/Dishr/
 
+> **Note — two websites exist.** Drew's animated landing site (`landing/`,
+> Next.js) is live at https://becipe.netlify.app with its own /privacy and
+> /terms, but it is still branded **Becipe**. The plain GitHub Pages site
+> above is branded **Dishr** and matches the App Store name, so the listing
+> uses those URLs. Once the Netlify site is rebranded to Dishr (ideally on a
+> real domain), switch the three URLs here and in `store.config.json`.
+
 ## App Privacy ("nutrition label") answers
 
 Data types collected, all **linked to identity**, none used for **tracking**:
